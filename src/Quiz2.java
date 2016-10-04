@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Muntake Lali
  */
 public class Quiz2 {
 
@@ -19,6 +19,12 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
+        //if the the integr is 0 , return 0
+        if(n==0){
+        return 0;
+    }
+        //return the the number plus every number lower than that number, added all together 
+        return n + sumUpTo(n-1);
         
     }
     
@@ -29,6 +35,21 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        //set new string to store reversed string in it 
+        String reverse="";
+        //if the length of the word in 1, the then return the string itself
+        if(word.length()==1){
+            //return word
+            return word;
+        }
+        else{
+            // take the last letter of the string, and add it to the string read backwards and store it in string 
+           reverse = word.charAt(word.length()-1)+reverseString(word.substring(0,word.length()-1));
+           //return the word backwards
+              return reverse;      
+ 
+          
+        }
         
     }
     
@@ -39,6 +60,10 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
+        //test for sum up method and print to screen
+        System.out.println(test.sumUpTo(5));
+        //test for reverse string method and print to screen
+        System.out.println(test.reverseString("cat"));
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
