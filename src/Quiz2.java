@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Katrina
  */
 public class Quiz2 {
 
@@ -19,7 +19,12 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        // base case - if the number is 1 return 1
+        if(n == 1){
+            return 1;
+        }
+        // recusive part - make the number smaller by 1
+        return sumUpTo(n - 1) + n;
     }
     
     /**
@@ -29,7 +34,13 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        // base case - once the word is less than 2 stop the recursion
+        if(word.length() < 2){
+            return word;
+        } 
+        // recursive part - take the first letter of the word and add it to the end
+        char w = word.charAt(0);
+        return reverseString(word.substring(1)) + w;
     }
     
     
@@ -40,8 +51,11 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
+        System.out.println("sumUpTo: ");
+        System.out.println(test.sumUpTo(5));
         
+        System.out.println("reverseString: ");
+        System.out.println(test.reverseString("computer"));
     }
     
 }
