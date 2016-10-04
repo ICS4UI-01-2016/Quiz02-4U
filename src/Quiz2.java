@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author guanv6321
  */
 public class Quiz2 {
 
@@ -19,7 +19,13 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
+        // if number is 0
+        if(n==0){
+            // return number
+            return n;
+        }
+        // returns the sum from 1 to number
+        return n + sumUpTo(n-1);
     }
     
     /**
@@ -28,8 +34,18 @@ public class Quiz2 {
      * @param word the word to be reversed
      * @return the input word reversed
      */
-    public String reverseString(String word){
-        
+    public String reverseString(String word){   
+        // if word has 1 letter
+        if(word.length() == 1){
+            // return the letter
+            return word;
+        }
+        // stores the last letter of the word
+        String last = word.substring(word.length()-1);
+        // arranges the letters into reverse
+        String reverse = word.substring(0,word.length()-1);
+        // return the rearranged letters
+        return last + reverseString(reverse);
     }
     
     
@@ -41,7 +57,8 @@ public class Quiz2 {
         Quiz2 test = new Quiz2();
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
-        
+        System.out.println(test.sumUpTo(10));
+        System.out.println(test.reverseString("mississippi"));
     }
     
 }
