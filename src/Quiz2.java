@@ -54,10 +54,7 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
-         Scanner input = new Scanner(System.in);
-        String word = input.nextLine();
-        System.out.println(test.sumUpTo(3));
-        System.out.println(test.reverseString(word));
+        
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
     }
