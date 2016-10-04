@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Jon Richards
  */
 public class Quiz2 {
 
@@ -19,7 +19,17 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
+        // BASE CASE
+        // Recursed all the way down to a value of 0 and therefore should return itself
+        if(n < 1){
+            return n;
+        }
         
+        // CALL ON ITSELF
+        // CHANGED STATE
+        // Recursively return sumUpTo while changing the state of n by subracting by 1
+        // each time until it hits base case and adding the value for n 
+        return sumUpTo(n - 1) + n;
     }
     
     /**
@@ -29,7 +39,17 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        // BASE CASE
+        // Recursed all the way down to a word length of 0 and therefore should return the word
+        if(word.length() < 1){
+            return word;
+        }
         
+        // CALL ON ITSELF
+        // CHANGED STATE
+        // Recursively return reverseString while changing the state of the word by chopping off the first letter
+        // each time until it hits base case and adding the first letter on the end of the string
+        return reverseString(word.substring(1, word.length())) + word.charAt(0);
     }
     
     
@@ -40,8 +60,20 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
+        // Tests
+        // Call on both methods with a specific parameter and output a value
+        // use test.sumUpTo(__)  or test.reverseString(___) to test
+        System.out.println("Question 1: " + test.sumUpTo(0));
+        System.out.println("Question 1: " + test.sumUpTo(1));
+        System.out.println("Question 1: " + test.sumUpTo(3));
+        System.out.println("Question 1: " + test.sumUpTo(5));
+        System.out.println("Question 1: " + test.sumUpTo(10));
         
+        System.out.println("Question 2: " + test.reverseString(""));
+        System.out.println("Question 2: " + test.reverseString("a"));
+        System.out.println("Question 2: " + test.reverseString("cat"));
+        System.out.println("Question 2: " + test.reverseString("doggie"));
+        System.out.println("Question 2: " + test.reverseString("mississippi"));
     }
     
 }
