@@ -60,7 +60,9 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
+        //test for sum up method and print to screen
         System.out.println(test.sumUpTo(5));
+        //test for reverse string method and print to screen
         System.out.println(test.reverseString("cat"));
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
