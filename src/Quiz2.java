@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Ross Malcolm
  */
 public class Quiz2 {
 
@@ -18,8 +18,11 @@ public class Quiz2 {
      * @param n the number to sum up to
      * @return 
      */
-    public int sumUpTo(int n){
-        
+    public int sumUpTo(int n){       
+        if(n == 0){
+         return n;  
+        }       
+        return n +sumUpTo(n-1);
     }
     
     /**
@@ -28,8 +31,13 @@ public class Quiz2 {
      * @param word the word to be reversed
      * @return the input word reversed
      */
-    public String reverseString(String word){
-        
+    public String reverseString(String word){ 
+     int n = word.length();
+     if(word.length() == 0 || word.length() == 1){       
+     return word;
+     }else{  
+//      return word.charAt(0) + word.charAt(n-1);
+     }return reverseString (word.substring(1 , n-1)); 
     }
     
     
@@ -41,7 +49,8 @@ public class Quiz2 {
         Quiz2 test = new Quiz2();
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
-        
+        System.out.println(test.sumUpTo(5));
+        System.out.println(test.reverseString("hello"));
     }
     
 }
