@@ -41,7 +41,7 @@ public class Quiz2 {
         
         //base case for when the method reaches the middle of the word/is done reversing word
         if (middle == 0) {
-            //return true boolean, because the word is a palindrome
+            //return word
             return word;
         }
        //create string for holding the left most letter of the s string
