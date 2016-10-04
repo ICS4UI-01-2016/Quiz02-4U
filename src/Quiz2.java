@@ -24,7 +24,7 @@ public class Quiz2 {
         if(n == 0 || n == 1){
             return 1;
         }
-        //the method caller, keeps calling until the problem is solved 
+        //the method caller, keeps calling method until the problem is solved, it adds previous number to next and so on 
         return sumUpTo(n-1) + n;
     }
     
