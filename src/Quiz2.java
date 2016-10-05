@@ -20,9 +20,13 @@ public class Quiz2 {
      */
     //the method used to call sumUpTo
     public int sumUpTo(int n){
-        //once n reaches 0, it finds a number it can work with, this is known as base case
-        if(n == 0 || n == 1){
+        //once n reaches 1, it finds a number it can work with, this is known as base case
+        if(n == 1){
             return 1;
+        }
+        //if they enter 0, output 0
+        if(n == 0){
+            return 0;
         }
         //the method caller, keeps calling method while subtracting 1 from n until the problem is solved, it adds previous number to next and so on 
         return sumUpTo(n-1) + n;
