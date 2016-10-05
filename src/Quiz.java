@@ -51,7 +51,7 @@ public class Quiz {
       */
      public static void main(String[] args) {
          // Use this section for conducting tests
-         Quiz2 test = new Quiz2();
+         Quiz test = new Quiz();
          System.out.println(test.sumUpTo(5));
          System.out.println(test.reverseString("cat"));
          //use test.sumUpTo(__)  or test.reverseString(___) to test
