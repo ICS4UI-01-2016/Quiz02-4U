@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author carter snowden
  */
 public class Quiz2 {
 
@@ -19,9 +19,16 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
-        
-    }
+        // formula to find the right number
+        if(n == 0 || n == 1){
+             return 1;
+         }
+        //taking 1 number off then adding it to the original number
+         return sumUpTo(n-1) + n;
+         
+    }         
     
+ 
     /**
      * Takes in a String and returns the same String in reverse
      * 
@@ -29,8 +36,21 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
-    }
+    //creating a formula to sort the letters and return the word
+    if((word==null)|| (word.length()<=1)){
+
+    return word;
+}
+    // returning the reverse string
+    return reverseString(word.substring(1)) + word.charAt(0);
+       
+    
+
+
+}
+
+
+
     
     
     /**
@@ -40,8 +60,18 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
-        
+        // conducting tests
+        System.out.println("Q1. " + test.sumUpTo(5));
+        System.out.println("Q2. " + test.reverseString("ab"));
     }
-    
 }
+        
+        //use test.sumUpTo(__)  or test.reverseString(___) to test
+           
+    
+ 
+         
+
+    
+   
+
