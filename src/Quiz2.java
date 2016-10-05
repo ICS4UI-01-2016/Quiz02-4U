@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Riley Voigt
  */
 public class Quiz2 {
 
@@ -20,7 +20,14 @@ public class Quiz2 {
      */
     public int sumUpTo(int n){
         
+       //if n is 0 or 1
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n + sumUpTo(n - 1);
     }
+    
+
     
     /**
      * Takes in a String and returns the same String in reverse
@@ -29,6 +36,15 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        
+        if((word==null)||(word.length()<= 1)){
+        return word;
+        
+    }
+         return reverseString(word.substring(1)) + word.charAt(0);
+        
+        
+        
         
     }
     
@@ -40,7 +56,9 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
-        //use test.sumUpTo(__)  or test.reverseString(___) to test
+        //test.sumUpTo(__)  or 
+        System.out.println("Q1: " + test.sumUpTo(5));
+        System.out.println("Q2: " + test.reverseString("riley"));
         
     }
     
