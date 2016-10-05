@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author Jonathan Preece
  */
 public class Quiz2 {
 
@@ -19,7 +19,13 @@ public class Quiz2 {
      * @return 
      */
     public int sumUpTo(int n){
+        //base case
+        if(n == 0){
+            return 0;
+        }
         
+        //get the sum up to n (return statement)
+        return n + sumUpTo(n - 1);
     }
     
     /**
@@ -29,9 +35,19 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        //base case
+        if(word.length() == 1 || word.length() == 0){
+            return word;
+        }
+     
+        //reverse the first and last letter
+        int x = word.charAt(0);
+        int y = word.charAt(word.length() - 1);
         
+        
+        //return statement
+        return word.substring(y, x);
     }
-    
     
     /**
      * @param args the command line arguments
@@ -39,9 +55,11 @@ public class Quiz2 {
     public static void main(String[] args) {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
+        Quiz2 test2 = new Quiz2();
         
         //use test.sumUpTo(__)  or test.reverseString(___) to test
-        
+        System.out.println(test.sumUpTo(5));
+        System.out.println(test2.reverseString("cat"));
     }
     
 }
