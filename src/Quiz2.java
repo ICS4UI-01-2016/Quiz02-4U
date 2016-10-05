@@ -6,7 +6,7 @@
 
 /**
  *
- * @author PUT_YOUR_NAME_HERE
+ * @author TheBigJ77
  */
 public class Quiz2 {
 
@@ -20,6 +20,14 @@ public class Quiz2 {
      */
     public int sumUpTo(int n){
         
+        //if the length if equal to 1 or 0 return the number
+        if(n==0 || n == 1){
+            return n;
+        }
+        
+        //return the number + each number before it
+        return n + sumUpTo(n -1);
+        
     }
     
     /**
@@ -29,6 +37,14 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
+        
+        //if the length of the word is 0 or 1 return the word
+        if (word.length() == 0 || word.length() == 1) 
+         return word;
+
+        //take all the letters except for the last one and keep putting it in fron of the one that wasnt taken 
+    return reverseString(word.substring(1)) + word.charAt(0);
+        
         
     }
     
@@ -40,6 +56,16 @@ public class Quiz2 {
         // Use this section for conducting tests
         Quiz2 test = new Quiz2();
         
+        //test sumUpTo
+         int num = test.sumUpTo(3);
+         
+         //output the result
+        System.out.println(num);
+        
+        //test reverseString
+        String words = test.reverseString("kip");
+        //output result
+        System.out.println(words);
         //use test.sumUpTo(__)  or test.reverseString(___) to test
         
     }
