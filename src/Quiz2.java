@@ -24,6 +24,7 @@ public class Quiz2 {
         if (n == 0 || n == 1) {
             return 1;
         }
+        //return the number + the number previous
         return n + sumUpTo(n - 1);
     }
     
@@ -36,11 +37,12 @@ public class Quiz2 {
      * @return the input word reversed
      */
     public String reverseString(String word){
-        
+        //if the word is nothing or 1 or less letters return word
         if((word==null)||(word.length()<= 1)){
         return word;
         
     }
+        //take the last letter and add it to the word string and continue 
          return reverseString(word.substring(1)) + word.charAt(0);
         
         
@@ -58,7 +60,7 @@ public class Quiz2 {
         
         //test.sumUpTo(__)  or 
         System.out.println("Q1: " + test.sumUpTo(5));
-        System.out.println("Q2: " + test.reverseString("riley"));
+        System.out.println("Q2: " + test.reverseString("ross"));
         
     }
     
